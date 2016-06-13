@@ -20,6 +20,7 @@ public class Gramar {
     Transição estadoatual;
     String palavrateste;
     int pos;
+    String retirasimbolo;
 
 //    public Gramar(){
 //        this.transiçoes = new ArrayList<Transição>;
@@ -107,12 +108,14 @@ public class Gramar {
           this.setEstadoatual(this.getTransiçoes().get(0));
           this.setPos(0);
           List<Transição> aux;
+          Transição aux4;
           aux = this.getTransiçoes();
           Transição aux2;
           this.setPalavrateste(this.transiçoes.get(0).getProduçao());
           this.setPos(pos++);
           System.out.println("palavra teste"+ this.getPalavrateste());
           int i = 0;
+          List<Transição> listaaux;
          while(pos <= palavra.length()){
              System.out.println("pos:" +this.getPos());
              //System.out.println("palavra na pos: "+palavra.charAt(pos));
@@ -146,7 +149,23 @@ public class Gramar {
              }
              this.setPos(this.getPos()+1);
              System.out.println("palavrateste3: "+this.getPalavrateste());
-             
+            if (this.getPos() == palavra.length()){
+                for (int x = 0; x < this.getSimbolos().length(); x++) {
+                    if(this.palavrateste.contains(this.getSimbolos().charAt(x))){
+                        
+                    }
+                    else 
+                        for (int y = 0; y < this.transiçoes.size(); y++) {
+                            aux4 = this.getTransiçoes().get(x);
+                            if(aux4.getSimbolo() == this.getSimbolos().charAt(x)){
+                                if (aux4.getProduçao())
+                            }
+                        }
+                        
+                        
+                    
+                )
+            } 
          }
           
 //          if(this.getEstadoatual().getProduçao().contains(palavra.substring(pos, pos))){
