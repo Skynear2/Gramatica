@@ -1,0 +1,11 @@
+a b
+A S B
+S
+B BB
+S A
+A epsilon
+A Aa
+S BaB
+B aBb
+B bBa
+B A

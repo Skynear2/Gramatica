@@ -1,0 +1,8 @@
+a b
+S
+S
+S aSb
+S SS
+S abS
+S epsilon
+S Sab
