@@ -146,28 +146,33 @@ public class Gramar {
                  System.out.println("i: "+i);
                  i++;
                  break;
-             }
+                }
              this.setPos(this.getPos()+1);
              System.out.println("palavrateste3: "+this.getPalavrateste());
+         
+            
+         
+
             if (this.getPos() == palavra.length()){
-                for (int x = 0; x < this.getSimbolos().length(); x++) {
-                    if(this.palavrateste.contains(this.getSimbolos().charAt(x))){
-                        
-                    }
-                    else 
+                for (int x = 0; x < this.getSimbolos().length(); x++){
+                
+                    if(this.palavrateste.contains(this.getSimbolos().substring(x, x))){
                         for (int y = 0; y < this.transiçoes.size(); y++) {
-                            aux4 = this.getTransiçoes().get(x);
-                            if(aux4.getSimbolo() == this.getSimbolos().charAt(x)){
-                                if (aux4.getProduçao())
-                            }
+                            aux4 = this.getTransiçoes().get(y);
+                           if(aux4.getSimbolo() == this.getSimbolos().substring(x, x) && aux4.getProduçao() == "epsilon"){
+                                this.setPalavrateste(this.getPalavrateste().replace(this.getSimbolos().substring(x, x), ""));
+                           }
                         }
-                        
-                        
-                    
-                )
-            } 
+                    }
+                }
+            }
          }
-          
+         
+   }
+}
+                    
+                
+            
 //          if(this.getEstadoatual().getProduçao().contains(palavra.substring(pos, pos))){
 //              System.out.println("if 1: "+this.getEstadoatual().getProduçao().contains(palavra.substring(pos, pos)));
 //              if(this.getPalavrateste().contains(this.getEstadoatual().getSimbolo())){
@@ -176,7 +181,7 @@ public class Gramar {
 //                 
 //              }
 //            }      
-          System.out.println("palavra teste2 "+ this.getPalavrateste());  
+//          System.out.println("palavra teste2 "+ this.getPalavrateste());  
    
           
 //          for(Transição e : aux){
@@ -194,6 +199,6 @@ public class Gramar {
           //}
           
       
-      }
+      
     
-}
+
